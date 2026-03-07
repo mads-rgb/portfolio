@@ -319,28 +319,23 @@
 
         // Function to handle project filtering
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all projects from other tabs
             const allProjectsContainer = document.getElementById('allProjects');
-            const animationProjects = document.querySelector('#animation .row').cloneNode(true);
-            const uiuxProjects = document.querySelector('#uiux .row').cloneNode(true);
-            const socialProjects = document.querySelector('#social .row').cloneNode(true);
+            const animationRow = document.querySelector('#animation .row');
+            const uiuxRow = document.querySelector('#uiux .row');
+            const socialRow = document.querySelector('#social .row');
 
-            // Function to load all projects
+            function appendProjectsFromRow(row) {
+                if (!row) return;
+                Array.from(row.children).forEach(child => {
+                    allProjectsContainer.appendChild(child.cloneNode(true));
+                });
+            }
+
             function loadAllProjects() {
                 allProjectsContainer.innerHTML = '';
-                allProjectsContainer.appendChild(animationProjects.cloneNode(true));
-                if (uiuxProjects) {
-                    const uiuxNodes = uiuxProjects.cloneNode(true);
-                    Array.from(uiuxNodes.children).forEach(child => {
-                        allProjectsContainer.appendChild(child);
-                    });
-                }
-                if (socialProjects) {
-                    const socialNodes = socialProjects.cloneNode(true);
-                    Array.from(socialNodes.children).forEach(child => {
-                        allProjectsContainer.appendChild(child);
-                    });
-                }
+                appendProjectsFromRow(animationRow);
+                appendProjectsFromRow(uiuxRow);
+                appendProjectsFromRow(socialRow);
             }
 
             // Load all projects initially
