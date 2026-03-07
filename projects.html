@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Manojkumar Ghaskata</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="logo">MG</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="project-header py-5">
+        <div class="container">
+            <h1 class="text-center section-title" data-aos="fade-up">My Projects</h1>
+            <p class="text-center lead mb-5" data-aos="fade-up" data-aos-delay="200">Explore my work across different domains</p>
+            
+            <!-- Project Categories -->
+            <div class="project-categories mb-5">
+                <ul class="nav nav-pills justify-content-center" id="projectTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all" type="button">All</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#animation" type="button">3D Animation</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#uiux" type="button">UI/UX Design/Web Development</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#social" type="button">Posters/Illustrations</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Project Content -->
+            <div class="tab-content" id="projectTabContent">
+                <!-- All Projects -->
+                <div class="tab-pane fade show active" id="all">
+                    <div class="row g-4" id="allProjects">
+                        <!-- Projects will be dynamically loaded here -->
+                    </div>
+                </div>
+
+                <!-- 3D Animation Projects -->
+                <div class="tab-pane fade" id="animation">
+                    <div class="row g-4">
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card project-card h-100">
+                                <div class="project-image">
+                                    <img src="./assets/benjamin.jpg" class="card-img-top" alt="Character Animation">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Character Animation</h5>
+                                            <p>3D Character Animated Series</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">German Animated Television Series</h5>
+                                    <p class="card-text">A character-driven animated 26 episodes showcasing emotional storytelling through fluid movement and expressive animation.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Autodesk Maya</span>
+                                        <span class="badge me-2">Character Animation</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://www.youtube.com/benjaminbluemchenTV" target="_blank" class="btn btn-primary me-2"><i class="fas fa-play me-2"></i>Watch Demo</a>
+                                        <a href="#" class="btn btn-outline-primary"><i class="fas fa-images me-2"></i>Process</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card project-card h-100">
+                                <div class="project-image">
+                                    <img src="./assets/Too_Too_boy.webp" class="card-img-top" alt="Character Animation">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Character Animation</h5>
+                                            <p>3D Character Animated Series</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Videogyan Shows For Kids</h5>
+                                    <p class="card-text">Videogyan is a popular animation studio known for producing engaging and educational animated content for children.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Autodesk Maya</span>
+                                        <span class="badge me-2">Character Animation</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://www.youtube.com/watch?v=cZwHEJ13wqQ" target="_blank" class="btn btn-primary me-2"><i class="fas fa-play me-2"></i>Watch Full Video</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card project-card h-100">
+                                <div class="project-image">
+                                    <img src="./assets/DO RE & MI.jpg" class="card-img-top" alt="Character Animation">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Creaturer Animation</h5>
+                                            <p>3D Character Animated Series <br>(Amazon Prime Video)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Do, Re & Mi - Animated Musical Series</h5>
+                                    <p class="card-text">"Do, Re & Mi" is three bird friends—Do, Re, and Mi—as they explore their melodious world, teaching kids about music, rhythm, and creativity.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Autodesk Maya</span>
+                                        <span class="badge me-2">Creature Animation</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://youtu.be/cbyNYIN-hIo" target="_blank" class="btn btn-primary me-2"><i class="fas fa-play me-2"></i>Watch Full Video</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card project-card h-100">
+                                <div class="project-image">
+                                    <img src="./assets/press-start.jpg" class="card-img-top" alt="Character Animation">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Character Animation</h5>
+                                            <p>3D Character Animated Series</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Press Start! - Animated Series</h5>
+                                    <p class="card-text">"Press Start!" is an animated series based on the popular children's book series Press Start! by Thomas Flintham.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Autodesk Maya</span>
+                                        <span class="badge me-2">step Animation</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://www.youtube.com/watch?v=fzCa2Boiivc" target="_blank" class="btn btn-primary me-2"><i class="fas fa-play me-2"></i>Watch Full Video</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card project-card h-100">
+                                <div class="project-image">
+                                    <img src="./assets/Bhut-Bandhus.jpg" class="card-img-top" alt="Character Animation">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Character Animation</h5>
+                                            <p>3D Character Animated Series<br>(Sonic TV)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bhoot Bandhus - Animated Series</h5>
+                                    <p class="card-text">"Bhoot Bandhus" is an Indian animated series that airs on Sonic TV, featuring a mix of adventure, comedy, and supernatural fun.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Autodesk Maya</span>
+                                        <span class="badge me-2">Character Animation</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://www.youtube.com/watch?v=34Q-4ELgLRg" target="_blank" class="btn btn-primary me-2"><i class="fas fa-play me-2"></i>Watch Full</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card project-card h-100">
+                                <div class="project-image">
+                                    <img src="./assets/puffins.jpg" class="card-img-top" alt="Character Animation">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Character Animation</h5>
+                                            <p>3D Character Animated Series</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Puffins - Animated Series</h5>
+                                    <p class="card-text">"Puffins" is a vibrant animated series featuring the voice of Johnny Depp as Johnny Puff, the leader of a group of quirky puffins.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Autodesk Maya</span>
+                                        <span class="badge me-2">Creature Animation</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://www.youtube.com/watch?v=nvdT9kF4yMc" target="_blank" class="btn btn-primary me-2"><i class="fas fa-play me-2"></i>Watch Full Video</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more 3D animation projects here -->
+                    </div>
+                </div>
+
+                <!-- UI/UX Design Projects -->
+                <div class="tab-pane fade" id="uiux">
+                    <div class="row g-4">
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="project-card card h-100">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c" class="card-img-top" alt="UI/UX Design">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Mobile App Design</h5>
+                                            <p>Food Delivery Application UI/UX</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Food Delivery App UI/UX</h5>
+                                    <p class="card-text">A comprehensive food-delivery application design focusing on user experience, intuitive navigation, and engaging interface.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Figma</span>
+                                        <span class="badge me-2">Prototyping</span>
+                                        <span class="badge me-2">Motion Design</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://www.behance.net/gallery/245129257/DineDash-Food-Servise-App" target="_blank" class="btn btn-primary"><i class="fas fa-eye me-2"></i>View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Projects -->
+                <div class="tab-pane fade" id="social">
+                    <div class="row g-4">
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="project-card card h-100">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113" class="card-img-top" alt="Social Media Design">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h5>Social Media Campaign</h5>
+                                            <p>Brand awareness campaign design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Brand Campaign</h5>
+                                    <p class="card-text">Social media campaign design for brand awareness and engagement.</p>
+                                    <div class="tech-stack mb-3">
+                                        <span class="badge me-2">Photoshop</span>
+                                        <span class="badge me-2">Illustrator</span>
+                                        <span class="badge me-2">After Effects</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="gallery.html" class="btn btn-primary"><i class="fas fa-images me-2"></i>View Gallery</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="social-links mb-4">
+                <a href="https://www.linkedin.com/in/manojkumar-ghaskata-animator/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHj4NBRbbTVKzIl6QqyPoGg%3D%3D" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="https://youtube.com/@manojghaskata8043?si=_x_S4ViwIdoyWk7r" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+                <a href="https://www.instagram.com/alonne_mads/?hl=en" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2025 Manojkumar Ghaskata. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script>
+        AOS.init();
+
+        // Function to handle project filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all projects from other tabs
+            const allProjectsContainer = document.getElementById('allProjects');
+            const animationProjects = document.querySelector('#animation .row').cloneNode(true);
+            const uiuxProjects = document.querySelector('#uiux .row').cloneNode(true);
+            const socialProjects = document.querySelector('#social .row').cloneNode(true);
+
+            // Function to load all projects
+            function loadAllProjects() {
+                allProjectsContainer.innerHTML = '';
+                allProjectsContainer.appendChild(animationProjects.cloneNode(true));
+                if (uiuxProjects) {
+                    const uiuxNodes = uiuxProjects.cloneNode(true);
+                    Array.from(uiuxNodes.children).forEach(child => {
+                        allProjectsContainer.appendChild(child);
+                    });
+                }
+                if (socialProjects) {
+                    const socialNodes = socialProjects.cloneNode(true);
+                    Array.from(socialNodes.children).forEach(child => {
+                        allProjectsContainer.appendChild(child);
+                    });
+                }
+            }
+
+            // Load all projects initially
+            loadAllProjects();
+
+            // Initialize AOS for dynamically loaded content
+            setTimeout(() => {
+                AOS.refresh();
+            }, 100);
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.scroll-progress').style.width = scrolled + '%';
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html> 
