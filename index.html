@@ -469,8 +469,7 @@
                                 <span class="badge">Bootstrap</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-primary me-2"><i class="fas fa-eye me-2"></i>View Project</a>
-                                <a href="#" class="btn btn-outline-primary"><i class="fas fa-images me-2"></i>Stills</a>
+                                <a href="https://mads-rgb.github.io/static-webpage/" target="_blank" class="btn btn-primary"><i class="fas fa-eye me-2"></i>View Project</a>
                             </div>
                         </div>
                     </div>
@@ -602,7 +601,20 @@
             };
 
             // Send email using EmailJS
-            emailjs.send('service_a0f7fjq', 'template_hsi4nxb', formData)
+            // First, send message to you
+            emailjs.send('service_a0f7fjq', 'template_jcuc9bk', formData)
+                .then(function(response) {
+                    console.log('Message sent to you successfully!');
+                    
+                    // Second, send auto-reply to the sender
+                    const autoReplyData = {
+                        name: formData.name,
+                        email: formData.email,
+                        subject: formData.subject
+                    };
+                    
+                    return emailjs.send('service_a0f7fjq', 'template_hsi4nxb', autoReplyData);
+                })
                 .then(function(response) {
                     // Show success message
                     alert('Message sent successfully! I will get back to you soon.');
