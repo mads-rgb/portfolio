@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -486,7 +488,7 @@
             <h2 class="text-center section-title" data-aos="fade-up">Get In Touch</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="card contact-info-card h-100" data-aos="fade-right" data-aos-delay="200">
+                    <div class="card contact-info-card h-100" data-aos="zoom-in" data-aos-delay="200">
                         <div class="card-body">
                             <h3 class="card-title mb-4"><i class="fas fa-address-card me-2"></i>Contact Info</h3>
                             <div class="contact-info">
@@ -507,7 +509,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="card shadow contact-card" data-aos="fade-left" data-aos-delay="400">
+                    <div class="card shadow contact-card" data-aos="zoom-in" data-aos-delay="400">
                         <div class="card-body p-5">
                             <div class="contact-social-icons">
                                 <a href="https://www.linkedin.com/in/manojkumar-ghaskata-animator/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHj4NBRbbTVKzIl6QqyPoGg%3D%3D" target="_blank" title="LinkedIn">
@@ -579,8 +581,39 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
     <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("bZy_f-UD-SQ8S_8zO"); // Your EmailJS public key
+        })();
+
         // Initialize AOS (same style as projects page)
         AOS.init();
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_a0f7fjq', 'template_hsi4nxb', formData)
+                .then(function(response) {
+                    // Show success message
+                    alert('Message sent successfully! I will get back to you soon.');
+                    // Reset form
+                    document.getElementById('contactForm').reset();
+                }, function(error) {
+                    // Show error message
+                    alert('Failed to send message. Please try again later or contact me directly at manojghaskata07@gmail.com');
+                    console.error('EmailJS error:', error);
+                });
+        });
 
         // Scroll Progress Bar
         window.addEventListener('scroll', () => {
