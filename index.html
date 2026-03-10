@@ -545,10 +545,10 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg submit-btn" onclick="redirectToWhatsApp(event)">
+                                    <button type="submit" class="btn btn-primary btn-lg submit-btn">
                                         <span class="d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-paper-plane me-2"></i>
-                                            Send Message
+                                            <i class="fas fa-paper-plane me-2 text-dark"></i>
+                                            <a href="https://wa.me/message/BR6D7VVRTJZ3L1" class="text-dark"></a>Send Message</a>
                                         </span>
                                     </button>
                                 </div>
@@ -599,26 +599,6 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // WhatsApp Redirect Function
-        function redirectToWhatsApp(event) {
-            event.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Create WhatsApp message
-            const whatsappMessage = `*New Contact Form Submission*\n\n*Name:* ${name}\n*Email:* ${email}\n*Subject:* ${subject}\n*Message:* ${message}`;
-            
-            // Encode message for URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            
-            // Redirect to WhatsApp
-            window.open(`https://wa.me/message/BR6D7VVRTJZ3L1?text=${encodedMessage}`, '_blank');
-        }
     </script>
 </body>
 </html> 
